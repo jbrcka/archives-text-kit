@@ -8,6 +8,10 @@ matches:
 #ITALICS IN ARCHIVESSPACE open italics markup - (only need open tag)
   - trigger: :ia
     replace: <i>
+
+#LINE BREAK
+  - trigger: :lb
+  - replace: <lb>
     
 #PARAGRAPH Open p tags and place cursor in center 
   - trigger: :pp
