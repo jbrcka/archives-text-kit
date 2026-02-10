@@ -11,7 +11,7 @@ matches:
 
 #LINE BREAK
   - trigger: :lb
-  - replace: <lb>
+    replace: <lb>
     
 #PARAGRAPH Open p tags and place cursor in center 
   - trigger: :pp
