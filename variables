@@ -1,0 +1,47 @@
+global_vars:
+ 
+#REPOSITORY/REPOSITORIES
+  - name: repository
+    type: choice
+    params:
+      values: 
+        #List your repository or repositories here
+        - "University of Notre Dame Archives"
+        - "Rare Books and Special Collections"
+        - "Architecture Archives"
+
+#PARENT INSTITUTION
+  - name: institution
+    type: echo
+    params:
+      echo: "University of Notre Dame"
+
+#YEARS INTERNAL RECORDS RESTRICTED
+  - name: years_local_records_restrict
+    type: echo
+    params:
+      #If your institution's internal records are restrictied from access for a prescribed number of years, enter that number here
+      echo: "72"
+
+#REPOSITORY LOCATION
+  - name: repository_location
+    type: echo
+    params:
+      #Enter repository location "city, state"
+      echo: "Notre Dame, Indiana"   
+
+#ASSOCIATED LIBRARY  
+  - name: associated_library
+    type: echo
+    params:
+      #Enter the name of lib associated w/repository here. Used in separated material note
+      echo: "Hesburgh Libraries"
+
+  - name: local_people
+    type: choice
+    params:
+      values:
+        - "Rev. Theodore M. Hesburgh, CSC"
+        - "Rev. Edward F. Sorin, CSC"
+      
+key: val
