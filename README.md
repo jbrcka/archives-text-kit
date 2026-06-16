@@ -1,4 +1,4 @@
-# Archival Text Kit
+# Archives Text Kit
 A set of standard archival processing text expansions for use with ArchivesSpace
 
 ## Notes:
