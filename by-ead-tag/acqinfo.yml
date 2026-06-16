@@ -1,0 +1,25 @@
+matches:
+
+#ACQINFO - Builder for Immediate Source of Acquisition Note 
+  - trigger: ":acqsim"
+    label: "ACQINFO -- Simple, Select Source"
+    replace: "{{form1.how_acquired}} {{form1.entity}} in {{form1.year}}."
+    vars:
+      - name: "form1"
+        type: form
+        params:
+          layout: "[[how_acquired]] \n[[entity]] \n in [[year]]."
+          fields:
+            how_acquired:
+              type: list
+              values:
+              - Purchased from
+              - Transferred from
+              - Donated by
+              - Gift of
+            entity:
+              type: text
+              default: "**entity name**"
+            year:
+              type: text
+              default: "**year**"

@@ -1,0 +1,23 @@
+matches:
+
+ #ALTERNATE FORM AVAILABLE - ***Name the form of item and where to find it***
+  - trigger: ":altcop"
+    label: "ALTFORMAVAIL - Select Type, Name Location"
+    # This is what actually gets pasted into your document
+    # E.g. "Microform copy available."
+    replace: "{{form1.copy_type}} copy available. See {{form1.location}}."
+    vars:
+      - name: form1
+        type: form
+        params:
+          # This controls the visual popup window
+          layout: |
+            ### Enter the type of copy (e.g., microfilm, digital) and its location (e.g. folder MABC 12345).
+            [[copy_type]] copy available. See [[location]].     
+          fields:
+            copy_type:
+              type: text
+              default: "**TYPE**"
+            location:
+              type: text
+              default: "**LOCATION**"

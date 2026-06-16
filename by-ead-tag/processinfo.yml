@@ -1,0 +1,63 @@
+matches: 
+# PROCESSINFO - *** initialisms are used on folders ***
+  - trigger: ":proini"
+    # Pasted in the doc
+    label: "PROCESSINFO -- Initials On Folders"
+    replace: "This collection utilizes the initials of {{form1.name_1}}, {{form1.name_2}}, and {{form1.name_3}} on the physical folder titles within the collection."
+    vars:
+      - name: form1
+        type: form
+        params:
+          # The visual popup window
+          layout: |
+            ### Please enter names and initials for each name abbreviated on folders; e.g. "John Fitzgerald Kennedy (JFK)"
+            
+            This collection utilizes the initials of [[name_1]], [[name_2]], and [[name_3]] on the physical folder titles within the collection."
+          fields:
+            name_1:
+              type: text
+              default: "FULL NAME (INITIALS)"
+            name_2:
+              type: text
+              default: "FULL NAME (INITIALS)"
+            name_3:
+              type: text
+              default: "FULL NAME (INITIALS)"
+
+
+# PROCESSINFO - ***material has a conservation ID for deacidification treatment***
+#Format to mirror MARC 583
+  - trigger: ":procon"
+    label: "PROCESSINFO -- Conservation ID, Dates, Treatment"
+    # Pasted in the doc
+    replace: "conservation id {{form1.number}} : {{form1.date}} : {{form1.treatment}}"
+    vars:
+      - name: form1
+        type: form
+        params:
+          # The visual popup window
+          layout: |
+            ### Please enter the conservation ID, date(s) of treatment, and treatment type
+            (e.g. conservation ID 16990_17251 | 20230414-20240514 | deacidification).
+            conservation ID [[number]] | [[date]] | [[treatment]]
+            ###Format dates YYYY-MM-DD 
+          fields:
+            number:
+              type: text
+              default: "ID NUMBER"
+            date:
+              type: text
+              default: "DATE(S)"
+            treatment:
+              type: choice
+              values:
+               - deacidification 
+               - deacidification and stabilization
+               - stabilization
+               - paper mended 
+               - custom enclosure
+               - rebound
+               - rebacked
+               - spine resewn and consolidated
+               - disbound
+               - OTHER, DESCRIBE HERE

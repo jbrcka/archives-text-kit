@@ -1,0 +1,151 @@
+matches:
+
+#BIBLIOGRAPY - ***Head Of Bibliography of Sources Consulted to Produce Finding Aid***
+#For use within Bibliography note CONTENT part of form in ASpace
+  - trigger: ":bibhea"
+    label: "BIBLIOGRAPHY -- Sources Head"
+    replace: "Source(s) Consulted:"
+
+
+#BIBLIOGRAPY - ***COLLECTION MATERIALS item of bibliography***
+#For use within Bibliography ITEM part of form in ASpace
+#Use when the collection itself serves as a reference source for the description of a person, place, or event within the finding aid.
+  - trigger: ":bibcol"
+    label: "BIBLIOGRAPHY -- COLLECTION MATERIALS Item of Bibliography"
+    replace: "{{form1.collection}}, ({{form1.collection_code}}), {{repository}} (collection materials)."
+    vars:
+      - name: form1
+        type: form
+        params:
+          # This controls the visual popup window
+          layout: |
+            ### Enter the collection title and its colleciton code.
+            (Enter data without puctuation)
+            E.g. Obermiller Blackbird Collection, (OMB), University of Notre Dame Archives (collection materials).
+            [[collection]] [[collection_code]] (collection materials).     
+          fields:
+            collection:
+              type: text
+              default: "Collection Name"
+            collection_code:
+              type: text
+              default: "Collection Code"
+            repository:
+              type
+
+
+#BIBLIOGRAPY - ***BOOK item of bibliography***
+  - trigger: ":bibboo"
+    label: "BIBLIOGRAPHY -- BOOK Item of Bibliography"
+    # This is what actually gets pasted into your document
+    # E.g. " Burlingame, M. 2008. Abraham Lincoln A Life. Johns Hopkins University Press." 
+    # Appropriate markup will wrap the internal elements: bibref. 
+    # For use with bibliography ITEM form in ASpace
+    replace: "{{form1.author}}. <imprint><date>({{form1.date}}). </date></imprint><title render=''italic''>{{form1.book_title}}.</title> {{form1.publisher}}."
+    vars:
+      - name: form1
+        type: form
+        params:
+          # This controls the visual popup window
+          layout: |
+            ### Enter the bibliographical reference for a BOOK.
+            ### Enter data without punctuation
+            E.g. Burlingame, M. 2008. Abraham Lincoln A Life. Johns Hopkins University Press.
+            [[author]][[date]] [[book_title]] [[publisher]].     
+          fields:
+            author:
+              type: text
+              default: "Lastname, Initial"
+            date:
+              type: text
+              default: "YYYY"
+            book_title:
+              type: text
+              default: "Book Title"
+            publisher:
+              type: text
+              default: "Publisher Name"
+
+
+#BIBLIOGRAPY - ***ARTICLE item of bibliography***
+  - trigger: ":bibart"
+    label: "BIBLIOGRAPHY -- ARTICLE Item of Bibliography"
+    # This is what actually gets pasted into your document
+    # E.g. " Morin, M., Murphy, D. (2026 March 31). Protest gathers community against Iran war. The Observer., LX(55), (1)." 
+    # Appropriate markup will wrap the internal elements: bibref. 
+    # For use with bibliography ITEM form in ASpace
+    replace: "{{form1.author}}. <imprint><date>({{form1.date}}). </date></imprint> {{form1.article_title}}. <title render=''italic''>{{form1.periodical_title}}.</title>, {{form1.volume_issue}}, ({{form1.pages}})."
+    vars:
+      - name: form1
+        type: form
+        params:
+          # This controls the visual popup window
+          layout: |
+            ### Enter the bibliographical reference for an ARTICLE.
+            ### (Enter data without punctuation)
+            E.g. Morin, M., Murphy, D. (2026 March 31). Protest gathers community against Iran war. The Observer., LX(55), (1).
+            [[author]] [[date]] [[article_title]] [[periodical_title]] [[volume_issue]] [[pages]]     
+          fields:
+            author:
+              type: text
+              default: "Lastname, Initial"
+            date:
+              type: text
+              default: "YYYY Month"
+            article_title:
+              type: text
+              default: "Article Title"
+            periodical_title:
+              type: text
+              default: "Periodical Title"
+            volume_issue:
+              type: text
+              default: "volume(issue)"
+            pages:
+              type: text
+              default: "P-P"
+
+
+
+#BIBLIOGRAPY - ***WEB PAGE item of bibliography***
+  - trigger: ":bibweb"
+    label: "BIBLIOGRAPHY -- WEB PAGE Item of Bibliography"
+    # This is what actually gets pasted into your document 
+    # E.g.: "Judy Garland. (1998 April 25). Find A Grave Index. Accessed 2026 April 6."
+    # Appropriate markup will wrap the internal elements: bibref. 
+    # For use with bibliography ITEM form in ASpace
+    replace: '<title render="italic"><extref xlink:href="{{form1.page_link}}"> {{form1.page_title}}</extref></title>. <imprint><date>({{form1.date_published}}). </date></imprint>{{form1.site_title}}. Accessed {{date_accessed}}.'
+    vars:
+      - name: form1
+        type: form
+        params:
+          # This controls the visual popup window
+          layout: |
+            ### Enter the page, url, date published, and site name for a WEB PAGE.
+            ### (Enter data without punctuation)
+            E.g. Judy Garland. (1998 April 25). Find A Grave Index. Accessed 2026 April 6.
+            [[page_title]] [[page_link]][[date_published]] [[site_title]] (today's access date supplied)   
+          fields:
+            page_title:
+              type: text
+              default: "Web PAGE Title"
+            page_link:
+              type: text
+              default: "PAGE URL"
+            date_published:
+              type: text
+              default: "YYYY Month DD"
+            site_title:
+              type: text
+              default: "Web Site Title"
+      - name: "date_accessed"
+        # Specify the 'date' type to use the date extension.
+        type: date
+        # The 'params' section configures the date extension.
+        params:
+          # The 'format' string determines the output of the date.
+          # %Y: Year with century (e.g., 2023)
+          # %B: Full month name (e.g., September)
+          # %-d: Day of the month, without leading zero (e.g., 4)
+          # Note: On Windows, you might need to use %#d instead of %-d
+          format: "%Y %B %-d"

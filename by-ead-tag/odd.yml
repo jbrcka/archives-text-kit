@@ -1,0 +1,52 @@
+matches: 
+
+#ODD - CONTENT ADVISORY *** Note builder for archival objects***
+  - trigger: ":harm"
+    label: "ODD -- Potentially Harmful or Explicit Content"
+    replace: "Contains potentially harmful or explicit content ({{form1.type}}{{form1.complex_type}} {{form1.content}}"
+    vars:
+      - name: "form1"
+        type: form
+        params:
+          layout: |
+           ### Please choose one phrase from the first group ***OR*** one each from the second and third groups to build the note.
+           Contains potentially harmful or explicit content 
+           [[type]] **OR** [[complex_type]]AND[[content]]
+           ### REMEMBER TO CHANGE THE NOTE LABEL TO "Content Advisory" IN ARCHIVESSPACE
+          fields:
+            type:
+              type: list
+              values:
+              - derogatory or dehumanizing matter).
+              - slurs against a person or people).
+              - calls for violence against a person or people).
+              - pornography).
+            complex_type:
+              type: list
+              values:
+              - description(s) of 
+              - depiction(s) of 
+              - record(s) concerning 
+            content:
+              type: list
+              values:
+              -  enslavement).
+              -  enslaved person or people).
+              -  hate groups or gatherings).
+              -  hate crimes).
+              -  execution).
+              -  self harm).
+              -  violence).
+              -  sexual violence).
+              -  abuse).
+              -  substance abuse).
+              -  war casualties).
+              -  human remains).
+              -  medical conditions or procedures).
+              -  OTHER DESCRIBE HERE).
+
+#ODD - Unpublished records *** Note builder for archival objects***
+  - trigger: ":gennp"
+    label: "ODD -- Portions Of Finding Aid Unpublished"
+    #Institution set in variables file
+    replace: "Sections of this finding aid describe restricted {{institution}} records and have not been published."

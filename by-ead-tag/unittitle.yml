@@ -1,0 +1,24 @@
+matches:
+
+# ---- Archival Unit Qualifiers, (Notre Dame local Practice) ---- 
+
+#UNITITLE - ***Closed records, description is private; append CLOSED RECORDS***
+  - trigger: ":unicls"
+    label: "UNITTITLE -- Closed Records"
+    replace: "[CLOSED RECORDS]"
+    
+#UNITITLE - ***Cloaked records, description in external system; append CLOAKED RECORDS***
+  - trigger: ":uniclo"
+    label: "UNITTITLE -- Cloaked Records"
+    replace: "[CLOAKED RECORDS]"
+
+#UNITITLE - ***Harmful or explicit content; append CONTENT ADVISORY***
+  - trigger: ":unicon"
+    label: "UNITTITLE -- Append Content Advisory"
+    replace: "[CONTENT ADVISORY]"
+
+#UNITITLE - ***Closed records, description is private; append ELECTRONIC RECORDS***
+  - trigger: ":uniele"
+    label: "UNITTITLE -- Electronic Records"
+    replace: "[Electronic Records]"
+    

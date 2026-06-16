@@ -1,0 +1,23 @@
+matches:
+
+ #PREFERRED CITATION *** ALL LOCATIONS ***
+  - trigger: ":pref"
+    label: "PEFERCITE -- Form, Select Repository"
+    # Pasted in the doc
+    replace: "{{form1.identifier}}, {{form1.title}}, {{repository}}, {{repository_location}}."
+    vars:
+      - name: form1
+        type: form
+        params:
+          # The visual popup window
+          layout: |
+            ### Please enter the collection code and collection name.
+            
+            [[identifier]], [[title]], {{repository}}, {{repository_location}}.           
+          fields:
+            identifier:
+              type: text
+              default: "**identifier**"
+            title:
+              type: text
+              default: "**title**"

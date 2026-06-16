@@ -1,0 +1,59 @@
+matches: 
+    
+
+#EDITIONSTMT -- External EAD modified and imported from another source***
+  - trigger: ":edifab"
+    label: "EDITIONSTMT -- External FULL EAD Modified And Imported"
+    # This is what actually gets pasted into your document
+    replace: "Finding aid bulk modified for migration into ArchivesSpace from {{form1.source}} {{output}}."
+    vars:
+      - name: form1
+        type: form
+        params:
+          # This controls the visual popup window
+          layout: |
+            ### Enter the arrangement scheme (e.g. chronologically, and then alphabetically by correspondent).
+            Finding aid bulk modified for migration into ArchivesSpace from [[source]] (date supplied).     
+          fields:
+            source:
+              type: text
+              default: "internal server"
+      - name: "output"
+        type: date
+        params:
+          # %Y: Year with century
+          # %m: Month as a zero-padded decimal (01-12)
+          # %d: Day of the month as a zero-padded decimal (01-31)
+          format: "%Y-%m-%d"
+
+
+#EDITIONSTMT -- Part of finding aid consists of EAD modified and imported from another source ***
+  - trigger: ":ediser"
+    label: "EDITIONSTMT -- External SERIES EAD Modified And Imported"
+    # This is what actually gets pasted into your document
+    # E.g. "University records group description bulk modified and ArchivesSpace from internal server [today's date]."
+    replace: "{{form1.what}} bulk modified for migration into ArchivesSpace from {{form1.source}} {{output}}."
+    vars:
+      - name: form1
+        type: form
+        params:
+          # This controls the visual popup window
+          layout: |
+            ### Enter the part of the finding aid imported and its source, date will be supplied.
+            [[what]] bulk modified for migration into ArchivesSpace from [[source]] (date supplied).     
+          fields:
+            what:
+              type: text
+              default: "University records group"
+            source:
+              type: text
+              default: "internal server"
+              
+      - name: "output"
+        type: date
+        params:
+          # %Y: Year with century
+          # %m: Month as a zero-padded decimal (01-12)
+          # %d: Day of the month as a zero-padded decimal (01-31)
+          format: "%Y-%m-%d"
+

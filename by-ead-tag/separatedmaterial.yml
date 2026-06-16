@@ -1,0 +1,19 @@
+matches:
+
+#SEPARATED MATERIAL - ***Print items in Library Catalog***
+#Relies on "associated library" set in variables.
+  - trigger: ":seppri"
+    label: "SEPARATEDMATERIAL -- Print in Catalog"
+    replace: Library of {{form1.name}} also received with the collection; titles are described individually within the {{associated_library}} catalog.
+    vars:
+      - name: form1
+        type: form
+        params:
+          # The visual popup window
+          layout: |
+            ### Please enter the name of the creator or donor. Institution's associated library name defined in variables."
+            Library of [[name]] also received with the collection; titles are described individually within the {{associated_library}} catalog."
+          fields:
+            name:
+              type: text
+              default: "DONOR-CREATOR" 

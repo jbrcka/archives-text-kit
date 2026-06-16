@@ -1,0 +1,106 @@
+matches:
+
+#CONDITIONS GOVERNING ACCESS - ***Fully open***
+  - trigger: ":accopen"
+    label: "ACCESSRESTRICT -- Fully Open"
+    replace: Collection is open for research.
+
+#CONDITIONS GOVERNING ACCESS *** University records restriction policy ****      
+  - trigger: ":accuni"
+    label: "ACCESSRESTRICT -- Closed University Records Policy"
+    replace: Unless otherwise noted, records of the {{institution}} are restricted by policy for a period of {{years_local_records_restrict}} years following date of creation.
+
+ #CONDITIONS GOVERNING ACCESSS - ***advance notice required***
+  - trigger: ":accnoti"
+    label: "ACCESSRESTRICT -- Open But Notice Is Required"
+    # This is what actually gets pasted into your document
+    # E.g. "Collection is open for research, however 72 hours advance notice is required. Contact the repository to arrange access.."
+    replace: "Collection is open for research, however {{form1.timespan}} advance notice is required. Contact the repository to arrange access."
+    vars:
+      - name: form1
+        type: form
+        params:
+          # This controls the visual popup window
+          layout: |
+            ### Please enter the required time (e.g., 24 hours, 2 days).
+            Collection is open for research, however [[timespan]] advance notice is required. Contact the repository to arrange access.     
+          fields:
+            timespan:
+              type: text
+              default: "**TIMESPAN**"
+
+ #CONDITIONS GOVERNING ACCESSS - ***open except until***
+  - trigger: ":accexu"
+    label: "ACCESSRESTRICT -- Open Except Until"
+    # This is what actually gets pasted into your document
+    # E.g. "Collection is open for research, however boxes 4-6 are closed until 2055."
+    replace: "Collection is open for research, however {{form1.units}} {{form1.is_are}} closed until {{form1.years}}."
+    vars:
+      - name: form1
+        type: form
+        params:
+          # This controls the visual popup window
+          layout: |
+            ### Please enter units (e.g. boxes or folders), select verb, and year the restrictions end.
+            Collection is open for research, however [[units]] [[is_are]] closed until [[years]].     
+          fields:
+            units:
+              type: text
+              default: "**UNIT(S)**"
+            is_are:
+              type: choice
+              values: 
+               - is
+               - are
+            years: 
+              type: text
+              default: "**YEAR(S)**"
+   
+#CONDITIONS GOVERNING ACCESS - ***Unprocessed, can't service***
+  - trigger: ":accunpn"
+    label: "ACCESSRESTRICT -- Unprocessed, Restricted"
+    replace: UNPROCESSED -- Restricted from access.
+
+#CONDITIONS GOVERNING ACCESS - ***Unprocessed, can likely service***
+  - trigger: ":accunpy"
+    label: "ACCESSRESTRICT -- Unprocessed, Likely Serviceable"
+    replace: UNPROCESSED -- Materials may be available, however curatorial permission and advance notice are required for access. Contact the repository for more information or to request an appointment.
+
+#CONDITIONS GOVERNING ACCESS - ***All collection materials “underprocessed”***
+  - trigger: ":accund"
+    label: "ACCESSRESTRICT -- UNDER Processed, Likely Serviceable"
+    replace: PARTIALLY PROCESSED -- This collection has been physically stabilized for safe handling by users. Existing archival description may provide minimal information about the material or information for large aggregations/groupings of materials, and these collections may require more mediation by staff and users to find specific resources. This collection is available to patrons, however curatorial permission and advance notice are required for access. Contact the repository for more information or to request an appointment.
+
+#CONDITIONS GOVERNING ACCESS - ***Partially processed; Can't service all***
+  - trigger: ":accpartn"
+    label: "ACCESSRESTRICT -- Partially Processed; PROCESSED PARTS Serviceable"
+    replace: PARTIALLY PROCESSED -- Processed portions of the collection are open for research. Unprocessed materials are restricted from access.
+
+#CONDITIONS GOVERNING ACCESS - ***Partially processed; Can likely service all***
+  - trigger: ":accparty"
+    label: "ACCESSRESTRICT -- Partially Processed; ALL PARTS Serviceable"
+    replace: PARTIALLY PROCESSED -- Processed portions of the collection are open for research. Unprocessed materials may be available, however curatorial permission and advance notice are required for access. Contact the repository for more information or to request an appointment.
+
+#CONDITIONS GOVERNING ACCESS - ***Content is fragile***
+  - trigger: ":accfra"
+    label: "ACCESSRESTRICT -- Fragile"
+    replace: Restricted due to fragility.
+    
+#CONDITIONS GOVERNING ACCESS - ***Content restricted until year***
+  - trigger: ":accyea"
+    label: "ACCESSRESTRICT -- Until Year"
+    # This is what actually gets pasted into your document
+    # E.g. "Collection is open for research, however 72 hours advance notice is required. Contact the repository to arrange access.."
+    replace: "Restricted until {{form1.year}}."
+    vars:
+      - name: form1
+        type: form
+        params:
+          # This controls the visual popup window
+          layout: |
+            ### Please enter end date of restriction.
+            Restricted until [[year]].     
+          fields:
+            year:
+              type: text
+              default: "**YEAR**"

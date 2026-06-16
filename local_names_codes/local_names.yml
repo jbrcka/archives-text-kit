@@ -1,0 +1,13 @@
+##Customize for your institution
+
+## Set expansions for names local to your institution or processing project here
+
+matches:
+  - trigger: ":ted"
+    label: "Local Name -- Father Ted Hesburgh"
+    replace: Rev. Theodore M. Hesburgh, CSC
+    
+  - trigger: ":moo"
+    label: 'Local Name -- Edward "Moose" Krause'
+    replace: Edward "Moose" Krause   
+    

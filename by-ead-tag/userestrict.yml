@@ -1,0 +1,6 @@
+matches:
+
+#CONDITIONS GOVERNING USE - Standard boilerplate language
+  - trigger: ":useboi"
+    label: "USERESTRICT -- Boilerplate Copyright Unknown"
+    replace: Copyright status for collection materials is unknown. Transmission or reproduction of materials protected by U.S. Copyright Law (Title 17, U.S.C.) beyond that allowed by fair use requires the written permission of the copyright owners. Works not in the public domain cannot be commercially exploited without permission of the copyright owners. Responsibility for any use rests exclusively with the user.

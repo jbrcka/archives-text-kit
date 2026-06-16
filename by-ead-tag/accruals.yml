@@ -1,0 +1,11 @@
+matches:
+
+#ACCRUALS - ***more accessions expected***
+  - trigger: ":accry"
+    label: "ACCRUALS -- More Expected"
+    replace: Further accruals are expected.
+
+#ACCRUALS - ***no more accessions expected***
+  - trigger: ":accrn"
+    label: "ACCRUALS -- NOT Expected"
+    replace: No further accruals are expected.

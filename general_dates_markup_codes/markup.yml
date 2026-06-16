@@ -1,0 +1,22 @@
+matches:
+#Add macros for XML markup here.
+
+#ITALICS open italics markup and place cursor in the center
+  - trigger: :ii
+    label: "Markup -- Italics Tags,  Complete"
+    replace: <i>$|$</i>
+
+#ITALICS IN ARCHIVESSPACE open italics markup - (only need open tag)
+  - trigger: :ia
+    label: "Markup -- Italics Tags, ArchivesSpace"
+    replace: <i>
+ 
+#PARAGRAPH Open p tags and place cursor in center 
+  - trigger: :pp
+    label: "Markup -- P Tags, Complete"
+    replace: <p>$|$</p>
+
+#PARAGRAPH IN ARCHIVESSPACE open paragraph markup - (only need open tag)
+  - trigger: :pa
+    label: "Markup -- P Tags, ArchivesSpace"
+    replace: <p>

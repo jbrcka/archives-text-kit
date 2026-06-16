@@ -1,0 +1,81 @@
+matches: 
+
+ #ARRANGEMENT - ***Collection with named series***
+  - trigger: ":arrser"
+    label: "ARRANGEMENT -- By Named Series"
+    # This is what actually gets pasted into your document
+    # E.g. "This collection consists of three series: Office Files, Manuscripts for Publication, and Family Papers."
+    replace: "This collection consists of {{form1.how_many}} series: {{form1.list_series}}."
+    vars:
+      - name: form1
+        type: form
+        params:
+          # This controls the visual popup window
+          layout: |
+            ### Enter the number of series, and then name them).
+            This collection consists of [[how_many]] series: [[list_series]].     
+          fields:
+            how_many:
+              type: text
+              default: "**NUMBER**"
+            list_series:
+              type: text
+              default: "**LIST OF SERIES NAMES**"
+
+#ARRANGEMENT - ***Collection unarranged, maintains original order***
+  - trigger: ":arrmoi"
+    label: "ARRANGEMENT -- Original Order, Unarranged"
+    replace: Collection is unarranged and maintains the creator's original order.
+  
+#ARRANGEMENT - ***Arranged according to other entity's format***
+  - trigger: ":arrpre"
+    label: "ARRANGEMENT -- According to Pre-existing List/Structure"
+    replace: "Collection arranged according to {{form1.whose}} {{form1.what}}."
+    vars:
+      - name: "form1"
+        type: form
+        params:
+          layout: "Collection arranged according to \n (whose?)[[whose]] \n(source)[[what]]"
+          fields:
+            whose:
+              type: list
+              values:
+              - donor's
+              - creator's
+              - originating office's
+            what:
+              type: list
+              values:
+                - packing list
+                - file structure
+                - inventory
+                - OTHER, DESCRIBE
+
+#ARRANGEMENT - ***Collection unarranged, maintains original order***
+  - trigger: ":arrchr"
+    label: "ARRANGEMENT -- Chronological Order"
+    replace: Arranged chronologically.
+    
+
+
+ #ARRANGEMENT - ***By this then by that***
+  - trigger: ":arrthi"
+    label: "ARRANGEMENT -- By This Then That"
+    # This is what actually gets pasted into your document
+    # E.g. "This collection consists of three series: Office Files, Manuscripts for Publication, and Family Papers."
+    replace: "Arranged {{form1.first_thing}} and then {{form1.second_thing}}."
+    vars:
+      - name: form1
+        type: form
+        params:
+          # This controls the visual popup window
+          layout: |
+            ### Enter the arrangement scheme (e.g. chronologically, and then alphabetically by correspondent).
+            Arranged [[first_thing]] and then [[second_thing]].     
+          fields:
+            first_thing:
+              type: text
+              default: "**first level arrangement**"
+            second_thing:
+              type: text
+              default: "**second order arrangement**"

@@ -1,0 +1,25 @@
+matches:
+
+
+###----SUBJECT RECORD ID CODES--------------###
+
+
+#ASPACE CODES - ***Genre Form Subject Record ID Visual Works***
+  - trigger: :vis
+    label: "ASpace Codes -- Subject Record ID, Visual Works"
+    replace: "2741"
+    
+#ASPACE CODES - ***Genre Form Subject Record ID Recordings***
+  - trigger: :rec
+    label: "ASpace Codes -- Subject Record ID, Recordings"
+    replace: "2740"
+
+#ASPACE CODES - ***Genre Form Subject Record ID Calendared Content***
+  - trigger: :cal
+    label: "ASpace Codes -- Subject Record ID, Calendared Content"
+    replace: "4149"
+    
+#ASPACE CODES - ***Genre Form Subject Record ID University Records***
+  - trigger: :uni
+    label: "ASpace Codes -- Subject Record ID, University Records"
+    replace: "2815"

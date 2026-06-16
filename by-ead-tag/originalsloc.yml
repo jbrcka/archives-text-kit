@@ -1,0 +1,45 @@
+matches:
+
+#ORIGINALSLOC - ***file contains duplications, originals' location named***
+  - trigger: ":oricop"
+    label: "ORIGINALSLOC -- Copies in File; Originals With Donor/Repository"
+    # This is what actually gets pasted into your document
+    replace: "File contains {{form1.dup_type}} of originals held by {{form1.whom}}."
+    vars:
+      - name: form1
+        type: form
+        params:
+          # This controls the visual popup window
+          layout: |
+            ### Enter the type of duplicate and location of originals (E.g. File contains microfilm copies of originals held in the National Library of Ireland.)
+            File contains [[dup_type]] of originals held by [[whom]].     
+          fields:
+            dup_type:
+              type: text
+              default: "**form of duplicate**"
+            whom:
+              type: text
+              default: "***donor, repository, etc.***"
+
+
+#ORIGINALSLOC - ***file contains duplications, originals' location named***
+  - trigger: ":orides"
+    label: "ORIGINALSLOC -- Originals destroyed post-duplication"
+    # This is what actually gets pasted into your document
+    replace: "Originals destroyed after {{form1.dup_type}}."
+    vars:
+      - name: form1
+        type: form
+        params:
+          # This controls the visual popup window
+          layout: |
+            ### Enter the form of duplication. (E.g. Originals destroyed afer microfilming.)
+            Originals destroyed after [[dup_type]].     
+          fields:
+            dup_type:
+              type: list
+              values: 
+               - microfilming
+               - digitization
+               - photoduplication
+               - OTHER DESCRIBE HERE

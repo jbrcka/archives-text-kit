@@ -1,0 +1,88 @@
+matches: 
+
+#LANGMATERIAL - ***One Language***
+  - trigger: ":lanone"
+    label: "LANGMATERIAL -- In One Language"
+    # This is what actually gets pasted into your document
+    replace: "Materials in {{form1.first_lang}}."
+    vars:
+      - name: form1
+        type: form
+        params:
+          # This controls the visual popup window
+          layout: |
+            ### Enter the language of the collection (E.g. Collection materials in Italian.)
+            Collection materials in [[first_lang]].     
+          fields:
+            first_lang:
+              type: text
+              default: "**Language**"
+
+
+#LANGMATERIAL - ***Mostly in one language with representatives from others***
+  - trigger: ":lanchi"
+    label: "LANGMATERIAL -- Chiefly One, Plus Others"
+    # This is what actually gets pasted into your document
+    replace: "Chiefly in {{form1.first_lang}} with some material {{form1.other_langs}}."
+    vars:
+      - name: form1
+        type: form
+        params:
+          # This controls the visual popup window
+          layout: |
+            ### Enter the chief and additional languages. (E.g. Chiefly in English with some correspondence in French and Italian.)
+            Chiefly in [[first_lang]] with some materal in [[other_langs]].     
+          fields:
+            first_lang:
+              type: text
+              default: "**first lang**"
+            other_langs:
+              type: text
+              default: "***other langs***"
+
+
+ #LANGMATERIAL - ***Mostly in one language with transcriptions into another***
+  - trigger: ":lantra"
+    label: "LANGMATERIAL -- Chiefly One, Transcribed, Translated Into Others"
+    # This is what actually gets pasted into your document
+    replace: "Chiefly in {{form1.first_lang}} with some material transcribed and translated into {{form1.other_langs}}."
+    vars:
+      - name: form1
+        type: form
+        params:
+          # This controls the visual popup window
+          layout: |
+            ### Enter the chief and additional languages. (E.g. Chiefly in Russian with some correspondence transcribed and translated into English.)
+            Chiefly in [[first_lang]] with some [[material_type]] transcribed and translated into [[other_langs]].     
+          fields:
+            first_lang:
+              type: text
+              default: "***first lang***"
+            material_type:
+              type: text
+              default: "***materials***"
+            other_langs:
+              type: text
+              default: "***other langs***"
+              
+ 
+#LANGMATERIAL - ***In one language, script is named***
+  - trigger: ":lanscr"
+    label: "LANGMATERIAL -- In One, Script Noted"
+    # This is what actually gets pasted into your document
+    replace: "Materials in {{form1.first_lang}} written in the {{form1.script_name}} script."
+    vars:
+      - name: form1
+        type: form
+        params:
+          # This controls the visual popup window
+          layout: |
+            ### Enter the language and script. (E.g. In Arabic, written in the Naskh script.)
+            In [[first_lang]] written in the [[script_name]] script.     
+          fields:
+            first_lang:
+              type: text
+              default: "**first lang**"
+            script_name:
+              type: text
+              default: "***script name***"
