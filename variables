@@ -1,47 +1,48 @@
 global_vars:
+
+### -------- INSTITUTIONAL VARIABLES --------- ###
  
-#REPOSITORY/REPOSITORIES
+#PLEASE NOTE: The variables here are configured for archival repository(ies) which are situated within a larger parent institution (here, a university), and linked to a library. 
+#If your organizational structure is not analogous, the expansions related these variables (noted below) may be affected. 
+ 
+#List name of repository or repositories here
+#This variable is referenced by: "PREFERCITE" and "BIBLIOGORAPHY - COLLECTION MATERIALS..."
   - name: repository
     type: choice
     params:
       values: 
-        #List your repository or repositories here
         - "University of Notre Dame Archives"
         - "Rare Books and Special Collections"
         - "Architecture Archives"
 
-#PARENT INSTITUTION
+#Enter the name of repository's/ies' parent institution under echo
+#This variable is referenced by: "PREFERCITE" and "ODD -- Portions Of Finding Aid Unpublished"
   - name: institution
     type: echo
     params:
       echo: "University of Notre Dame"
 
-#YEARS INTERNAL RECORDS RESTRICTED
-  - name: years_local_records_restrict
-    type: echo
-    params:
-      #If your institution's internal records are restrictied from access for a prescribed number of years, enter that number here
-      echo: "72"
-
-#REPOSITORY LOCATION
+#List location of repository or repositories under echo
+#This variable is referenced by: "PREFERCITE"
   - name: repository_location
     type: echo
     params:
-      #Enter repository location "city, state"
-      echo: "Notre Dame, Indiana"   
+      echo: "Notre Dame, Indiana"     
+ 
+#If parent institution's internal records are restricted for a prescribed number of years, enter that number under echo
+#This variable is utilized by the expansion "ACCESSRESTRICT -- Closed University Records Policy"
+  - name: years_local_records_restrict
+    type: echo
+    params:
+      echo: "72"
+      
 
-#ASSOCIATED LIBRARY  
+#If repository is associated with (part of/partnered with/etc.) a library, enter folloing "echo"
+#This variable is referenced by the expansion "SEPARATEDMATERIAL -- Print in Catalog"
   - name: associated_library
     type: echo
     params:
-      #Enter the name of lib associated w/repository here. Used in separated material note
       echo: "Hesburgh Libraries"
 
-  - name: local_people
-    type: choice
-    params:
-      values:
-        - "Rev. Theodore M. Hesburgh, CSC"
-        - "Rev. Edward F. Sorin, CSC"
-      
+
 key: val
