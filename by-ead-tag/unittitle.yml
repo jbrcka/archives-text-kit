@@ -1,6 +1,6 @@
 matches:
 
-# ---- Archival Unit Qualifiers, (Notre Dame local Practice) ---- 
+# ---- Archival Unit Title Qualifiers, (Notre Dame local Practice) ---- 
 
 #UNITITLE - ***Closed records, description is private; append CLOSED RECORDS***
   - trigger: ":unicls"
