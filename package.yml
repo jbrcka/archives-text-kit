@@ -1,12 +1,38 @@
 # Name of the package
-name: archival processing macros
+name: archival-text-kit
 
 # Import the other files
 import:
-  - notes.yml
-  - markup.yml
-  - names.yml
-  - dates.yml
+
+# -- by EAD tag ------------------------------
+
+  - accessrestrict.yml
+  - accruals.yml
+  - acqinfo
+  - altformavail.yml
+  - arrangement.yml
+  - bibliography.yml
+  - editionstmt.yml
+  - langmaterial.yml
+  - odd.yml
+  - originalsloc.yml
   - prefercite.yml
-  - template.yml
+  - processinfo.yml
+  - separatedmaterial.yml
+  - unittitle.yml
+  - userestrict.yml
+
+# -- General Dates Markup & Codes --------------
+
+  - dates.yml
+  - markup.yml
+  - universal_aspace_codes.yml
+
+# -- Local names & codes ------------------------
+
+  - local_aspace_codes.yml
+  - local_names.yml
+
+# ---- Variables --------------------------------
   - variables.yml
+  
