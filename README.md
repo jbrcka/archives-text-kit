@@ -1,5 +1,5 @@
 # Archives Text Kit
-Notre Dame's standard archival processing text expansions for use with ArchivesSpace <br>
+Notre Dame's standard archival processing text expansions for use in ArchivesSpace via the Espanso text expander <br>
 <i>Install Espanso from:</i> https://espanso.org/install/
 ## Notes: Conatent & Organization
 - Expansions are organized into 3 groups:<br>
