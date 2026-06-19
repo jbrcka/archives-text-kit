@@ -10,7 +10,7 @@ Notre Dame's standard archival processing text expansions for use with ArchivesS
 - Variables are configured to encode institutional metadata for several repositories located within an academic library system, as well as a standard institutional records retention length in years
 - Pressing alt + space on a PC or option + space on a Mac will retrieve a list of all expansions installed on the local machine
 
-## 🔄 Updating Your Text Kit Expansions (Mac)
+## 🔄 Loading & Updating Your Text Kit Expansions (Mac)
 
 Follow these steps whenever you need to download the latest Archives-Text-Kit expansion shortcuts.
 
