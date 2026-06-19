@@ -17,7 +17,7 @@ Notre Dame's standard archival processing text kit. Facilitates production of Ar
 Follow these steps to download or update the latest Archives-Text-Kit expansion shortcuts.
 
 ### 1. Setup (First Time Only)
-* Download`update-text-kit-mac.sh` from (https://github.com/jbrcka/archives-text-kit/blob/main/update-text-kit.sh) and save it on your **Desktop**. 
+* Download`update-text-kit-mac.sh` from https://github.com/jbrcka/archives-text-kit/blob/main/update-text-kit.sh and save it on your **Desktop**. 
 
 ### 2. Run the Update
 1. Open the **Terminal** app (Press `Cmd + Space`, type `Terminal`, and press Enter).
