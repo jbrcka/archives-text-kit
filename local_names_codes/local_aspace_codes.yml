@@ -20,6 +20,6 @@ matches:
     replace: "4149"
     
 #ASPACE CODES - ***Genre Form Subject Record ID University Records***
-  - trigger: :uni
+  - trigger: :uny
     label: "ASpace Codes -- Subject Record ID, University Records"
     replace: "2815"
