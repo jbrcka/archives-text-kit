@@ -12,7 +12,7 @@ Notre Dame's standard archival processing text expansions for use with ArchivesS
 
 ## 🔄 Loading & Updating Your Text Kit Expansions (Mac)
 
-Follow these steps whenever you need to download the latest Archives-Text-Kit expansion shortcuts.
+Follow these steps to download or update the latest Archives-Text-Kit expansion shortcuts.
 
 ### 1. Setup (First Time Only)
 * Download`update-text-kit-mac.sh` from (https://github.com/jbrcka/archives-text-kit/blob/main/update-text-kit.sh) and save it on your **Desktop**. 
