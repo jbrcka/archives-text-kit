@@ -1,7 +1,7 @@
 #!/bin/bash
 clear
 echo "========================================"
-echo "    Updating Archives Text Kit          "
+echo "    Updating Archives-Text-Kit          "
 echo "========================================"
 
 # Setup exact paths for your repository and local directory
@@ -38,7 +38,7 @@ echo "Restarting Espanso to apply updates..."
 espanso restart
 
 echo "----------------------------------------"
-echo " SUCCESS: archives-text-kit is updated! "
+echo " SUCCESS: Archives-Text-Kit is updated! "
 echo "----------------------------------------"
 
 # Keeps window open until user presses Enter
