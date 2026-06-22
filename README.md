@@ -17,7 +17,7 @@ Notre Dame's standard archival processing text kit. Facilitates production of Ar
 Follow these steps to download or update the latest Archives-Text-Kit expansion shortcuts.
 
 ### 1. Setup (First Time Only)
-* Download`update-text-kit-mac.sh` from https://github.com/jbrcka/archives-text-kit/blob/main/update-text-kit.sh and save it on your **Desktop**. 
+* Download`update-text-kit-mac.sh` from https://github.com/jbrcka/archives-text-kit/blob/main/update-text-kit-mac.sh and save it on your **Desktop**. 
 
 ### 2. Run the Update
 1. Open the **Terminal** app (Press `Cmd + Space`, type `Terminal`, and press Enter).
@@ -25,3 +25,19 @@ Follow these steps to download or update the latest Archives-Text-Kit expansion 
 
 ```bash
 bash ~/Desktop/update-text-kit-mac.sh
+```
+## 🔄 Loading & Updating Your Text Kit Expansions (Windows)
+
+Follow these steps to download or update the latest Archives-Text-Kit expansion shortcuts.
+
+### 1. Setup (First Time Only)
+* Download the `update-text-kit-win.bat` file from  https://github.com/jbrcka/archives-text-kit/blob/main/update-text-kit-win.bat and save it to your **Desktop**.
+
+### 2. Run the Update
+1. Double-click the `update-text-kit.bat` file on your Desktop.
+2. If a blue Windows "SmartScreen" protection box appears:
+   * Click **More info**
+   * Click **Run anyway**
+
+A black window will appear, automatically download the newest templates, update your local Espanso directory, and refresh the app. Once it says "SUCCESS", press any key to close the window!
+
