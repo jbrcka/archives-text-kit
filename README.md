@@ -2,7 +2,7 @@
 Notre Dame's standard archival processing text kit. Facilitates production of ArchivesSpace metadata via the Espanso text expander. <br>
 
 <i>Install Espanso from:</i> https://espanso.org/install/
-## Notes: Content & Organization
+## :information_source: Notes: Content & Organization
 - Expansions are organized into 3 foldered groups:<br>
     - **Expansions by EAD Tag:** includes one file of expansions per tag.<br>
     - **Dates and Markup:** includes expansions for today's date in DACS and EDTF, expansions for foramtting wrapper tags for use inside and outside of ASpace, universal ASpace platform codes (e.g., restriction type codes).
