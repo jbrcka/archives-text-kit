@@ -6,33 +6,30 @@ matches:
     label: "BIBLIOGRAPHY -- Sources Head"
     replace: "Source(s) Consulted:"
 
-
 #BIBLIOGRAPY - ***COLLECTION MATERIALS item of bibliography***
 #For use within Bibliography ITEM part of form in ASpace
 #Use when the collection itself serves as a reference source for the description of a person, place, or event within the finding aid.
   - trigger: ":bibcol"
     label: "BIBLIOGRAPHY -- COLLECTION MATERIALS Item of Bibliography"
-    replace: "{{form1.collection}}, ({{form1.collection_code}}), {{repository}} (collection materials)."
+    # Pasted in the doc
+    replace: "{{form1.identifier}}, {{form1.title}}, {{repository}}, {{repository_location}} (collection materials)."
     vars:
       - name: form1
         type: form
         params:
-          # This controls the visual popup window
+          # The visual popup window
           layout: |
-            ### Enter the collection title and its colleciton code.
+            ### Please enter the collection code and collection name.
             (Enter data without puctuation)
-            E.g. Obermiller Blackbird Collection, (OMB), University of Notre Dame Archives (collection materials).
-            [[collection]] [[collection_code]] (collection materials).     
+            E.g. Obermiller Blackbird Collection, (OMB), University of Notre Dame Archives (collection materials).  
+            [[identifier]], [[title]], {{repository}}, {{repository_location}} (collectoin materials).           
           fields:
-            collection:
+            identifier:
               type: text
-              default: "Collection Name"
-            collection_code:
+              default: "**identifier**"
+            title:
               type: text
-              default: "Collection Code"
-            repository:
-              type
-
+              default: "**title**"
 
 #BIBLIOGRAPY - ***BOOK item of bibliography***
   - trigger: ":bibboo"
