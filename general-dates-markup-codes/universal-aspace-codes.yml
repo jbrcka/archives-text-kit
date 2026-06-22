@@ -20,10 +20,10 @@ matches:
 
 #ASPACE CODES - ***Restriction Type, 4 - Restricted In-Process***
   - trigger: :resinp
-    label: " ASpace Codes -- Restriction Type 4, Restricted In-Process"
+    label: "ASpace Codes -- Restriction Type 4, Restricted In-Process"
     replace: "InProcessSpecColl"
 
 #ASPACE CODES - ***Restriction Type, 5 - Other***
   - trigger: :resoth
-    label: " ASpace Codes -- Restriction Type 5, Other"
+    label: "ASpace Codes -- Restriction Type 5, Other"
     replace: "ColdStorageBrbl"
