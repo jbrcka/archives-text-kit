@@ -38,4 +38,4 @@ import:
 
 # ---- Updater Scripts  -------------------------
   - update-text-kit-mac.sh
-  
+  - update-text-kit-mac.bat
