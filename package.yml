@@ -26,12 +26,12 @@ import:
 
   - dates.yml
   - markup.yml
-  - universal_aspace_codes.yml
+  - universal-aspace-codes.yml
 
 # -- Local names & codes ------------------------
 
-  - local_aspace_codes.yml
-  - local_names.yml
+  - local-aspace-codes.yml
+  - local-names.yml
 
 # ---- Variables --------------------------------
   - variables.yml
