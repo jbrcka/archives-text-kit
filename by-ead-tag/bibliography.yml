@@ -22,7 +22,7 @@ matches:
             ### Please enter the collection code and collection name.
             (Enter data without puctuation)
             E.g. Obermiller Blackbird Collection, (OMB), University of Notre Dame Archives (collection materials).  
-            [[identifier]], [[title]], {{repository}}, {{repository_location}} (collectoin materials).           
+            [[identifier]], [[title]], {{repository}}, {{repository_location}} (collection materials).           
           fields:
             identifier:
               type: text
